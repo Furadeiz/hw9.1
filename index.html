@@ -4,9 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .h1Display {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <h1>Заголовок появись</h1>
-    <button>вкл/выкл заголовка</button>
+    <h1 class="h1 h1Display">Заголовок появись</h1>
+    <button type="button" class="btn">вкл/выкл заголовка</button>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const h1El = document.querySelector('.h1');
+        const btnEl = document.querySelector('.btn');
+
+    btnEl.addEventListener('click', function () {
+        h1El.classList.toggle('h1_display');
+    });
+});
+    </script>
 </body>
 </html>
