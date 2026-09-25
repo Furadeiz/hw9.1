@@ -11,7 +11,8 @@
     </style>
 </head>
 <body>
-    <h1 class="h1 h1Display">Заголовок появись</h1>
+    // задание 1
+    <h1 class="h1">Заголовок появись</h1>
     <button type="button" class="btn">вкл/выкл заголовка</button>
     <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -19,7 +20,7 @@
         const btnEl = document.querySelector('.btn');
 
     btnEl.addEventListener('click', function () {
-        h1El.classList.toggle('h1_display');
+        h1El.classList.toggle('h1Display');
     });
 });
     </script>
