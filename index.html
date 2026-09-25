@@ -18,24 +18,37 @@
     //задание 2
     <p class="colorText">Текст который меняет цвет</p>
     <button class="btnColor">Поменять цвет у обзаца</button>
+
+    //задние 3
+    <h1 class="hw">Hello world!</h1>
+    <button type="button" class="changeText">Изменить текст</button>
+    
+
     <script>  
     //задание 1  
     document.addEventListener('DOMContentLoaded', function () {
         const h1El = document.querySelector('.h1');
         const btnEl = document.querySelector('.btn');
 
-    btnEl.addEventListener('click', function () {
-        h1El.classList.toggle('h1Display');
-
-        
+        btnEl.addEventListener('click', function () {
+            h1El.classList.toggle('h1Display');
+        });
     });
-});
+
     // задание 2
     const colorTextEl = document.querySelector('.colorText');
     const btnColorEl = document.querySelector('.btnColor');
 
     btnColorEl.addEventListener('click', function () {
         colorTextEl.style.color = 'red';
+    });
+
+    //  задание 3
+    const hwEl = document.querySelector('hw');
+    const changeTextEl = document.querySelector('chageText');
+
+    changeText.addEventListener('click',function () {
+        hwEl.textContent = 'Привет, мир!';
     });
     </script>
 </body>
