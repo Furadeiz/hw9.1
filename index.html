@@ -14,15 +14,29 @@
     // задание 1
     <h1 class="h1">Заголовок появись</h1>
     <button type="button" class="btn">вкл/выкл заголовка</button>
-    <script>
+    
+    //задание 2
+    <p class="colorText">Текст который меняет цвет</p>
+    <button class="btnColor">Поменять цвет у обзаца</button>
+    <script>  
+    //задание 1  
     document.addEventListener('DOMContentLoaded', function () {
         const h1El = document.querySelector('.h1');
         const btnEl = document.querySelector('.btn');
 
     btnEl.addEventListener('click', function () {
         h1El.classList.toggle('h1Display');
+
+        
     });
 });
+    // задание 2
+    const colorTextEl = document.querySelector('.colorText');
+    const btnColorEl = document.querySelector('.btnColor');
+
+    btnColorEl.addEventListener('click', function () {
+        colorTextEl.style.color = 'red';
+    });
     </script>
 </body>
 </html>
