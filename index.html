@@ -11,18 +11,26 @@
     </style>
 </head>
 <body>
-    // задание 1
+    <!--задние 1-->
     <h1 class="h1">Заголовок появись</h1>
     <button type="button" class="btn">вкл/выкл заголовка</button>
     
-    //задание 2
+    <!--задние 2-->
     <p class="colorText">Текст который меняет цвет</p>
     <button class="btnColor">Поменять цвет у обзаца</button>
 
-    //задние 3
+    <!--задние 3-->
     <h1 class="hw">Hello world!</h1>
-    <button type="button" class="changeText">Изменить текст</button>
+    <button class="changeText">Изменить текст</button>
     
+    <!--задние 4-->
+    <p class="description">бла бла</p>
+    <p class="description">бла бла</p>
+    <p class="description">бла бла</p>
+    <p class="description">бла бла</p>
+    <p class="description">бла бла</p>
+    <button class="btnDescription">Изменить текст</button>
+
 
     <script>  
     //задание 1  
@@ -44,11 +52,21 @@
     });
 
     //  задание 3
-    const hwEl = document.querySelector('hw');
-    const changeTextEl = document.querySelector('chageText');
+    const hwEl = document.querySelector('.hw');
+    const changeTextEl = document.querySelector('.changeText');
 
-    changeText.addEventListener('click',function () {
+    changeTextEl.addEventListener('click',function () {
         hwEl.textContent = 'Привет, мир!';
+    });
+
+    //  задание 4
+    const descriptionEl = document.querySelectorAll('.description');
+    const btnDescriptionEl = document.querySelector('.btnDescription');
+
+    btnDescriptionEl.addEventListener('click',function () {
+        descriptionEl.forEach(function (el) {
+            el.textContent = 'Текст изменён';
+        })
     });
     </script>
 </body>
