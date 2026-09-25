@@ -24,12 +24,26 @@
     <button class="changeText">Изменить текст</button>
     
     <!--задние 4-->
-    <p class="description">бла бла</p>
-    <p class="description">бла бла</p>
-    <p class="description">бла бла</p>
-    <p class="description">бла бла</p>
-    <p class="description">бла бла</p>
-    <button class="btnDescription">Изменить текст</button>
+    <section id="task4">
+        <p class="description">бла бла</p>
+        <p class="description">бла бла</p>
+        <p class="description">бла бла</p>
+        <p class="description">бла бла</p>
+        <p class="description">бла бла</p>
+        <button class="btnDescription">Изменить текст</button>
+    </section>
+    
+
+    <!--задние 5-->
+    <section id="task5">
+        <p class="description">бла бла</p>
+        <p class="descr">бла бла</p>
+        <p class="descr">бла бла</p>
+        <p class="description">бла бла</p>
+        <p class="descr">бла бла</p>
+        <button class="btnQuerySelectorAll">Изменить текст</button>
+    </section>
+   
 
 
     <script>  
@@ -60,13 +74,25 @@
     });
 
     //  задание 4
-    const descriptionEl = document.querySelectorAll('.description');
-    const btnDescriptionEl = document.querySelector('.btnDescription');
+    const task4 = document.getElementById('task4');
+    const descriptionEl = task4.querySelectorAll('.description');
+    const btnDescriptionEl = task4.querySelector('.btnDescription');
 
     btnDescriptionEl.addEventListener('click',function () {
         descriptionEl.forEach(function (el) {
             el.textContent = 'Текст изменён';
-        })
+        });
+    });
+
+    //  задание 5
+    const task5 = document.getElementById('task5');
+    const querySelectorAllEl = task5.querySelectorAll('.description');
+    const btnQuerySelectorAllEl = task5.querySelector('.btnQuerySelectorAll');
+
+    btnQuerySelectorAllEl.addEventListener('click',function () {
+        querySelectorAllEl.forEach(function (el) {
+            el.textContent = 'Новый текст';
+        });
     });
     </script>
 </body>
