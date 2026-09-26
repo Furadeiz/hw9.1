@@ -4,9 +4,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .h1Display {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <h1>Заголовок появись</h1>
-    <button>вкл/выкл заголовка</button>
+    <!--задние 1-->
+    <h1 class="h1">Заголовок появись</h1>
+    <button type="button" class="btn">вкл/выкл заголовка</button>
+    
+    <!--задние 2-->
+    <p class="colorText">Текст который меняет цвет</p>
+    <button class="btnColor">Поменять цвет у обзаца</button>
+
+    <!--задние 3-->
+    <h1 class="hw">Hello world!</h1>
+    <button class="changeText">Изменить текст</button>
+    
+    <!--задние 4-->
+    <section id="task4">
+        <p class="description">бла бла</p>
+        <p class="description">бла бла</p>
+        <p class="description">бла бла</p>
+        <p class="description">бла бла</p>
+        <p class="description">бла бла</p>
+        <button class="btnDescription">Изменить текст</button>
+    </section>
+    
+    <!--задние 5-->
+    <section id="task5">
+        <p class="description">бла бла</p>
+        <p class="descr">бла бла</p>
+        <p class="descr">бла бла</p>
+        <p class="description">бла бла</p>
+        <p class="descr">бла бла</p>
+        <button class="btnQuerySelectorAll">Изменить текст</button>
+    </section>
+   
+    <!--задние 6-->
+    <button type="button" class="newElBtn">Добавить элемент</button>
+
+    <!--задние 7-->
+    <section class="task7">
+         <p class="descripti">бла бла</p>
+        <p class="descr">бла бла</p>
+        <p class="descr">бла бла</p>
+        <p class="descripti">бла бла</p>
+        <p class="descr">бла бла</p>
+        <button class="btnP">Удалить элемент</button>
+    </section>
+       
+    <script>  
+    //задание 1  
+    document.addEventListener('DOMContentLoaded', function () {
+        const h1El = document.querySelector('.h1');
+        const btnEl = document.querySelector('.btn');
+
+        btnEl.addEventListener('click', function () {
+            h1El.classList.toggle('h1Display');
+        });
+    });
+
+    // задание 2
+    const colorTextEl = document.querySelector('.colorText');
+    const btnColorEl = document.querySelector('.btnColor');
+
+    btnColorEl.addEventListener('click', function () {
+        colorTextEl.style.color = 'red';
+    });
+
+    //  задание 3
+    const hwEl = document.querySelector('.hw');
+    const changeTextEl = document.querySelector('.changeText');
+
+    changeTextEl.addEventListener('click',function () {
+        hwEl.textContent = 'Привет, мир!';
+    });
+
+    //  задание 4
+    const task4 = document.getElementById('task4');
+    const descriptionEl = task4.querySelectorAll('.description');
+    const btnDescriptionEl = task4.querySelector('.btnDescription');
+
+    btnDescriptionEl.addEventListener('click',function () {
+        descriptionEl.forEach(function (el) {
+            el.textContent = 'Текст изменён';
+        });
+    });
+
+    //  задание 5
+    const task5 = document.getElementById('task5');
+    const querySelectorAllEl = task5.querySelectorAll('.description');
+    const btnQuerySelectorAllEl = task5.querySelector('.btnQuerySelectorAll');
+
+    btnQuerySelectorAllEl.addEventListener('click',function () {
+        querySelectorAllEl.forEach(function (el) {
+            el.textContent = 'Новый текст';
+        });
+    });
+
+    // задание 6
+        const newElement = document.createElement('p');
+        const newElBtnElement = document.querySelector('.newElBtn');
+
+    newElBtnElement.addEventListener('click', function () {
+        
+        newElement.textContent = 'Новый абзац';
+
+        document.body.appendChild(newElement);
+    });
+ 
+    // задание 7
+    const pEl = document.querySelector('.descripti');
+    const btnPEl = document.querySelector('.btnP');
+
+    btnPEl.addEventListener('click', function () {
+       pEl.remove();
+    });
+    </script>
 </body>
 </html>
