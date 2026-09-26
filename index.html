@@ -33,7 +33,6 @@
         <button class="btnDescription">Изменить текст</button>
     </section>
     
-
     <!--задние 5-->
     <section id="task5">
         <p class="description">бла бла</p>
@@ -44,8 +43,8 @@
         <button class="btnQuerySelectorAll">Изменить текст</button>
     </section>
    
-
-
+    <!--задние 6-->
+    <button type="button" class="newElBtn">Добавить элемент</button>
     <script>  
     //задание 1  
     document.addEventListener('DOMContentLoaded', function () {
@@ -94,6 +93,19 @@
             el.textContent = 'Новый текст';
         });
     });
+
+    // задание 6
+        const newElement = document.createElement('p');
+        const newElBtnElement = document.querySelector('.newElBtn');
+        
+    newElBtnElement.addEventListener('click', function () {
+        
+        newElement.textContent = 'Новый абзац';
+
+        document.body.appendChild(newElement);
+    });
+
+
     </script>
 </body>
 </html>
